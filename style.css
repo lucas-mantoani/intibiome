@@ -1,0 +1,127 @@
+/*  
+Theme Name: intibiome
+Author: Lucas Mantoani
+Author URI: https://lucasmantoani.com.br/
+*/
+
+/*Reset*/
+html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6, ol, p, pre, table, ul, dd, dt, li, tbody, td, tfoot, th, thead, tr, button, del, ins, map, object, a, abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, img, kbd, q, samp, small, span, strong, sub, sup, tt, var, legend, fieldset, figure {margin: 0; padding: 0; } img, fieldset {border: 0; } article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block; } img {max-width: 100%; height: auto; } @media screen {img { width: auto;} }
+
+/*Formatação Geral*/
+*{font-family: 'Trebuchet MS', sans-serif;}
+body {font-family: 'Trebuchet MS', sans-serif; color: #000;}
+html {scroll-behavior: smooth;}
+a {color: #000; text-decoration: none;}
+a:hover {color: #389CD6; text-decoration: none;}
+blockquote {font: italic 1rem/1.6rem "Times New Roman", Times, serif; padding: 15px 30px;}
+ul, ol {margin: 0; padding: 0; line-height: 1.6rem; list-style-position: inside;}
+li {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {line-height: 1.4rem; margin: 0;} 
+h1 {font-size: 2rem;} h2 {font-size: 1.8rem;}  h3 {font-size: 1.6rem;} h4 {font-size: 1.4rem;} h5 {font-size: 1.2rem;} h6 {font-size: 1rem;}
+
+/*Menu*/
+.menu{background-color: white; display: block;}
+.menu .logo{width: 195px; height: auto; display: block; margin: 0 auto;}
+.menu .busca { color: #9D8E8E; font-size: 1.3rem; transition: 0.3s; position: absolute; right: 10%; top: 30px; }
+.menu .navbar{background-color: #389CD6; text-transform: lowercase;}
+.menu .dropdown-hover:hover>.dropdown-menu { display: inline-block; background: #9D8E8E;}
+.menu .dropdown-hover>.dropdown-toggle:active { pointer-events: none; }
+.menu .navbar-expand-lg .navbar-collapse{justify-content: center;}
+.menu .navbar a, .menu .navbar a:hover{color: #fff;}
+.menu .nav-item{padding: 5px 15px;}
+.menu .list-group-flush { border-radius: 0; width: 100%;}
+.menu .dropdown-toggle::after{ font-weight: 900; font-family: "Font Awesome 5 Free"; content: "\f078"; color: #fff; display: inline-block; font-size: 11px; width: 15px; height: 15px; margin-left: 0.355em; vertical-align: 0.055em; border-top: 0 solid; border-right: 0 solid transparent; border-bottom: 0; border-left: 0 solid transparent;}
+.menu .list-group-flush>.list-group-item {width: max-content; background: none; border: 0; display: flex;} 
+.menu .list-group{flex-direction: row;}
+
+/*Modal busca*/
+.buscamodal .modal-content {border: 0px solid rgba(0, 0, 0, 0.2); background: transparent; color: #fff!important; padding: 25px 25px;}
+.buscamodal .modal{background: #389cd6c9!important;}
+.buscamodal .modal-header h5{margin: 0px;}
+.buscamodal .close {float: right; font-size: 4.5rem; font-weight: 100; line-height: 1; color: #fff; background: transparent!important; text-shadow: 0 1px 0 #fff; transition: .3s; opacity: 1; border-radius: 50%!important; width: 50px!important; height: 50px!important; padding: 13px 0px!important; margin: -50px 0px 80px auto!Important; }
+.buscamodal .close:hover{color: #9D8E8E; text-shadow: 0 1px 0 transparent; opacity: 1; background: transparent!important;}
+.buscamodal .close:not(:disabled):not(.disabled):hover, .servicos .close:not(:disabled):not(.disabled):focus{color: #389CD6; opacity: 1; background: transparent!important}
+.buscamodal .close:focus{outline: none}
+.buscamodal .modal-body{line-height: 160%; font-size: 110%; text-align: justify; font-weight: 300;}
+.buscamodal .modal-body p{width: 100%; line-height: 160%; font-size: 110%; text-align: justify; font-weight: 300;}
+.buscamodal .modal-body input::placeholder{color: #fff}
+.buscamodal .modal-body input{width: 100%; background: transparent; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: solid 0px #fff; padding: 10px 0px; outline: none; margin-bottom: 10px;}
+.buscamodal .modal-body input[type=text] {width: 100%; background: transparent; border-top: 0px; border-left: 0px; border-right: 0px; border-bottom: solid 1px #fff; padding: 10px 0px; outline: none; margin-bottom: 10px; color: #fff; font-size: 2rem; }
+.buscamodal .modal-body input[type=submit]{width: max-content; border-radius: 3px; display: inline-block; transition: .3s; margin-top: 20px; border: solid #fff 2px; background: #389CD6; color: #fff; padding: 10px 30px; float: left; font-weight: 600;}
+.buscamodal .modal-body input[type=submit]:hover{border: solid 2px #fff; background: #fff; color: #fff;}
+.buscamodal .modal-body input[type=button]{width: max-content; border-radius: 3px; margin-left: 15px; display: inline-block; transition: .3s; margin-top: 20px; border: solid #fff 2px; background: #389CD6; color: #fff; padding: 10px 30px; float: left; font-weight: 600;}
+.buscamodal .modal-body input[type=button]:hover{border: solid 2px #fff; background: #fff; color: #389CD6;}
+.buscamodal .botaobusca{padding: 5px; transition: .3s;}
+.buscamodal .modal-header{border-bottom: 0;}
+
+/*404*/
+.notfound {padding: 10% 20px 1px 20px; color: #77599b; font-family: 'Montserrat', sans-serif; font-size: 6em; width: 100%; line-height: 1.0em; font-weight: 600; text-transform: uppercase; text-align: center; letter-spacing: 0.5px; } 
+.messagenf{text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 400; } 
+.messagenf {text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 400; margin-bottom: 15%; }
+
+/*About*/
+.about{padding: 100px 0px 0;}
+.about h2{color: #389CD6; font-weight: bold; font-size: 1.8rem; line-height: 2rem; text-align: center; margin: 0 auto 40px; width: 744px;}
+.about p{max-width: 744px; margin: 15px auto; font-size: 1rem; line-height: 1.6rem; color: #7B7070; text-align: center;}
+.about .icons{margin: 60px auto; max-width: 1130px; display: block;}
+.about .icons > img{max-width: 100%; height: auto; display: block;}
+
+/*Produtcs*/
+.products{padding: 70px 0;}
+.products h2{color: #389CD6; font-weight: bold; font-size: 1.8rem; line-height: 2rem; text-align: center; margin: 0 auto 50px;}
+.products .produto{box-shadow: 0px 3px 16px #00000014; cursor: pointer; border-radius: 16px; margin: 15px 0}
+.products .produto h3.titulo{padding: 25px; color: #7B7070; font-size: 1.2rem; line-height: 1.3rem; font-weight: 400; transition: .3s; text-align: center;}
+.products .produto button{color: #fff; background: unset; border: 0; outline: 0; font-size: 1.3rem; padding: 15px 20px; width: 100%; text-align: center; border-radius: 16px; text-transform: lowercase; display: block; border-radius: 0 0 16px 16px;}
+.products .produto .wellness{background: #389CD6;}
+.products .produto .active{background: #309D5F;}
+.products .produto .agecare{background: #EE6381;}
+
+/*Intimate*/
+.intimate img{width: 100%; height: auto; pointer-events: none;}
+
+/*Blog home*/
+.blog{padding: 70px 0;}
+.blog h2{color: #389CD6; font-weight: bold; font-size: 1.8rem; line-height: 2rem; text-align: center; margin: 0 auto 40px;}
+.blog .postagem{box-shadow: 0px 3px 16px #00000014; cursor: pointer; border-radius: 16px; padding-bottom: 20px; margin: 15px 0}
+.blog .postagem h3.titulo{padding: 25px; color: #7B7070; font-size: 1.2rem; line-height: 1.2rem; font-weight: 400; transition: .3s;}
+.blog .postagem:hover h3.titulo{color: #389CD6}
+.blog .postagem{width: 100%; height: auto;}
+.blog button{background: #389CD6; color: #fff; border: 0; outline: 0; padding: 10px 20px; width: 312px; text-align: center; border-radius: 16px; text-transform: lowercase; letter-spacing: 0.4px; margin: 50px auto 0; display: block; transition: .3s;}
+.blog button:hover{background: #7B7070;}
+
+/*Rodape*/
+.rodape{background: #389CD6; padding: 60px 0 40px; color: #fff}
+.rodape .logo{width: 116px; height: auto; margin: 10px 0;}
+.rodape .redes{color: #fff; display: flex;}
+.rodape .redes .rede{font-size: 2rem; margin: 10px}
+.rodape nav{margin: 0 auto 50px; width: 100%; display: flex; justify-content: center;}
+.rodape nav ul{width: max-content; list-style: none; max-width: 100%; display: inline-flex; justify-content: center; align-items: center;}
+.rodape nav ul li{text-transform: lowercase; text-decoration: none; padding: 0px 30px; border-right: solid 1px white;}
+.rodape nav ul li:last-child{border-right: 0;}
+.rodape a{color: #fff;}
+
+/*Estruturais*/
+.pagewidth {width: 1130px; margin: 0 auto;}
+
+/*Alinhamento e Clear*/
+img.alignleft, img.aligncenter, img.alignright, img.alignnone {margin-bottom: 15px; } .alignleft {float: left; margin-right: 30px; } .alignright {float: right; margin-left: 30px; } .aligncenter {text-align: center; display: block; margin-left: auto; margin-right: auto; } .wp-caption {text-align: center; margin-bottom: 15px; max-width: 100%; } .wp-caption-text {font-style: italic; font-size: 95%; line-height: 120%; margin: 6px 0; } .clear {clear: both; } .left {float: left; } .right {float: right; } .textleft {text-align: left; } .textright {text-align: right; } .textcenter {text-align: center; } .clearfix:after, .widget li:after, #body:after, #footer:after, footer:after, .pagenav:after, #main-nav:after, .menu:after, .gallery:after, #content:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; } .clearfix, .widget li, #body, #footer, footer, .pagenav, #main-nav, .menu, .gallery, #content { display: inline-block; } .clearfix, .widget li, #body, #footer, footer, .pagenav, #main-nav, .menu, .gallery, #content { display: block; zoom: 1; }
+
+@media screen and (max-width: 768px){
+.menu .navbardesk{display: none;}
+.menu .navbar{padding: 0;}
+.menu .navbar-nav{padding: 30px; text-align: center;}
+.menu .navbar-toggler { padding: 0; margin: 0; position: absolute; top: -50px; left: 10%; height: auto; width: auto; font-size: 1.5rem; line-height: 1.5rem; outline: 0; border: 0; color: #9D8E8E; }
+.menu .navbar-toggler-icon { width: auto; height: auto;}
+.menu button:focus{outline: 0;} 
+.products .produto .wellness{padding: 20px;}
+.pagewidth { width: 90%;}
+.about p { max-width: 90%;}  
+.about h2{width: 80%;}  
+.products .pagewidth{width: 100%;}
+.blog .pagewidth{width: 100%;}
+.rodape nav ul{width: 100%; display: block;}
+.rodape nav ul li { padding: 15px 30px; border-right: 0; text-align: center;}
+.rodape nav ul li:after{display: block; content: ''; margin: 15px auto 0; width: 30px; height: 3px; background: #fff; border-radius: 8px;} 
+.rodape .redes { justify-content: center; align-items: center; }
+.rodape .logo { margin: 50px auto 0; display: block;}
+}
